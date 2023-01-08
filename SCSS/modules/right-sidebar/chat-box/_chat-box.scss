@@ -1,0 +1,76 @@
+.chat-box
+{
+    position: relative;
+    width: 100%;
+    height: calc(100% - ($header-height * 2));
+    padding: 50px;
+    overflow-y: auto;
+
+    .message
+    {
+        position: relative;
+        display: flex;
+        width: 100%;
+        margin: 5px 0;
+
+        &.my-message{justify-content: flex-end;}
+
+        &.his-message 
+        {
+            justify-content: start; 
+
+            p 
+            {
+                background-color: #fff;
+                text-align: left;
+
+                &::before 
+                {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: -12px;
+                    width: 20px;
+                    height: 20px;
+                    background-image: linear-gradient(225deg, #fff 0%, #fff 50%, transparent 50%, transparent);
+                }
+            }
+        }
+
+        p 
+        {
+            position: relative;
+            right: 0;
+            text-align: right;
+            max-width: 65%;
+            padding: 12px;
+            background-color: #dcf8c6;
+            border-radius: 10px;
+            font-size: 0.9em;
+            
+            //crea l' angolo esterno superiore destro al box del messaggio della chat
+            &::before 
+            {
+                content: '';
+                position: absolute;
+                top: 0;
+                right: -12px;
+                width: 20px;
+                height: 20px;
+                background-image: linear-gradient(135deg, #dcf8c6 0%, #dcf8c6 50%, transparent 50%, transparent);
+            }
+
+            span 
+            {
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                margin-top: 5px;
+                font-size: 0.8em;
+                opacity: 0.5;
+            }
+
+            ion-icon[name="thumbs-up"] {color: rgb(255, 160, 0);}
+        }
+    }
+}

@@ -1,0 +1,42 @@
+.search-chat
+{
+    position: relative;
+    width: 100%;
+    height: $chatbox-height;
+    background-color: #f6f6f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 15px;
+
+    div 
+    {
+        width: 100%;
+
+        input 
+        {
+            width: 100%;
+            outline: none;
+            border: none;
+            background-color: #fff;
+            padding: 6px;
+            height: 38px;
+            border-radius: 30px;
+            font-size: 14px;
+            padding-left: 40px;
+
+            &::placeholder
+            {
+                color: #bbb;
+            }
+        }
+
+        ion-icon
+        {
+            position: absolute;
+            top: 14px;
+            left: 30px;
+            font-size: 1.2em;
+        }
+    }
+}

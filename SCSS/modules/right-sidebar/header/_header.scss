@@ -1,0 +1,20 @@
+.imgText
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h4 
+    {
+        font-weight: 500;
+        line-height: 1.2em;
+        margin-left: 15px;
+
+        span 
+        {
+            font-size: 0.8em;
+            color: #555;
+        }
+    }
+}
